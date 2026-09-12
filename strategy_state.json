@@ -9,11 +9,11 @@
   },
   "per_symbol": {
     "AAPL": {
-      "buy_momentum_pct": 3.0,
-      "stop_loss_pct": -4.0,
-      "take_profit_pct": 10.0,
-      "source": "backtest"
-    },
+  "buy_momentum_pct": 99,
+  "stop_loss_pct": -4.0,
+  "take_profit_pct": 10.0,
+  "source": "review"
+},
     "MSFT": {
       "buy_momentum_pct": 4.0,
       "stop_loss_pct": -8.0,
