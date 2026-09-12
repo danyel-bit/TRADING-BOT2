@@ -1,0 +1,36 @@
+name: Backtest
+
+on:
+  schedule:
+    - cron: '0 12 1 * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: pip install -r requirements.txt
+
+      - name: Run backtest
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: python backtest.py
+
+      - name: Commit updated strategy + backtest log
+        run: |
+          git config user.name "constellation-bot"
+          git config user.email "actions@github.com"
+          git add strategy_state.json logs/
+          git commit -m "Backtest results for $(date -u +'%Y-%m-%d')" || echo "Nothing to commit"
+          git push
