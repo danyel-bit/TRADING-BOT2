@@ -11,52 +11,62 @@
     "AAPL": {
       "buy_momentum_pct": 3.0,
       "stop_loss_pct": -4.0,
-      "take_profit_pct": 10.0
+      "take_profit_pct": 10.0,
+      "source": "backtest"
     },
     "MSFT": {
       "buy_momentum_pct": 4.0,
       "stop_loss_pct": -8.0,
-      "take_profit_pct": 10.0
+      "take_profit_pct": 10.0,
+      "source": "backtest"
     },
     "NVDA": {
       "buy_momentum_pct": 2.0,
       "stop_loss_pct": -8.0,
-      "take_profit_pct": 20.0
+      "take_profit_pct": 20.0,
+      "source": "backtest"
     },
     "TSLA": {
       "buy_momentum_pct": 5.0,
       "stop_loss_pct": -8.0,
-      "take_profit_pct": 10.0
+      "take_profit_pct": 10.0,
+      "source": "backtest"
     },
     "AMZN": {
       "buy_momentum_pct": 3.0,
       "stop_loss_pct": -4.0,
-      "take_profit_pct": 20.0
+      "take_profit_pct": 20.0,
+      "source": "backtest"
     },
     "GOOGL": {
       "buy_momentum_pct": 2.0,
       "stop_loss_pct": -8.0,
-      "take_profit_pct": 15.0
+      "take_profit_pct": 15.0,
+      "source": "backtest"
     },
     "AMD": {
       "buy_momentum_pct": 3.0,
       "stop_loss_pct": -4.0,
-      "take_profit_pct": 10.0
+      "take_profit_pct": 10.0,
+      "source": "backtest"
     },
     "META": {
       "buy_momentum_pct": 3.0,
       "stop_loss_pct": -8.0,
-      "take_profit_pct": 10.0
+      "take_profit_pct": 10.0,
+      "source": "backtest"
     },
     "COIN": {
       "buy_momentum_pct": 5.0,
       "stop_loss_pct": -6.0,
-      "take_profit_pct": 10.0
+      "take_profit_pct": 10.0,
+      "source": "backtest"
     },
     "PLTR": {
       "buy_momentum_pct": 2.0,
       "stop_loss_pct": -6.0,
-      "take_profit_pct": 10.0
+      "take_profit_pct": 10.0,
+      "source": "backtest"
     }
   },
   "updated": "2026-09-12",
