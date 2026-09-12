@@ -216,6 +216,7 @@ def main():
         if notes:
             # only store the fields that actually differ from global, keeps the file readable
             overrides = {k: v for k, v in new_params.items() if state["global"].get(k) != v}
+            overrides["source"] = "review"
             state["per_symbol"][symbol] = overrides
             all_notes += notes
         all_notes.append(
