@@ -21,8 +21,9 @@ something real money could eventually touch.
 
 import os
 import json
-import datetime from zoneinfo
-import ZoneInfo import requests
+import datetime 
+from zoneinfo import ZoneInfo
+import requests
 
 ALPACA_KEY = os.environ["ALPACA_API_KEY"]
 ALPACA_SECRET = os.environ["ALPACA_SECRET_KEY"]
