@@ -62,7 +62,7 @@ TAKE_PROFIT_PCT = STATE["take_profit_pct"]
 POSITION_SIZE_USD = STATE["position_size_usd"]
 
 LOG_DIR = os.path.join(os.path.dirname(__file__), "logs")
-TODAY = datetime.date.today().isoformat()
+TODAY = datetime.datetime.now(ZoneInfo("America/New_York")).date().isoformat()
 LOG_PATH = os.path.join(LOG_DIR, f"{TODAY}.md")
 
 
