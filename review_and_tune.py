@@ -21,8 +21,8 @@ something real money could eventually touch.
 
 import os
 import json
-import datetime
-import requests
+import datetime from zoneinfo
+import ZoneInfo import requests
 
 ALPACA_KEY = os.environ["ALPACA_API_KEY"]
 ALPACA_SECRET = os.environ["ALPACA_SECRET_KEY"]
@@ -37,7 +37,7 @@ HEADERS = {
 HERE = os.path.dirname(__file__)
 STATE_PATH = os.path.join(HERE, "strategy_state.json")
 LOG_DIR = os.path.join(HERE, "logs")
-TODAY = datetime.date.today().isoformat()
+TODAY = datetime.datetime.now(ZoneInfo("America/New_York")).date().isoformat()
 REVIEW_LOG_PATH = os.path.join(LOG_DIR, f"review-{TODAY}.md")
 
 DEFAULT_STATE = {
