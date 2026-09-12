@@ -179,8 +179,17 @@ def main():
             note = f"{symbol}: backtest failed ({e})."
             params = None
         notes.append(note)
-        if params:
-            state["per_symbol"][symbol] = params
+
+        if not params:
+            continue
+
+        existing = state["per_symbol"].get(symbol)
+        if existing and existing.get("source") == "review":
+            notes.append(f"{symbol}: skipping backtest update — live review has already tuned this ticker from real trades, which takes priority.")
+            continue
+
+        params["source"] = "backtest"
+        state["per_symbol"][symbol] = params
 
     state["last_backtest_summary"] = " ".join(notes)
     state["updated"] = TODAY
