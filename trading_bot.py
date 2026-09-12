@@ -14,8 +14,8 @@ logs/. Read those logs over time to see what worked and refine the rules yoursel
 
 import os
 import json
-import datetime
-import requests
+import datetime from zoneinfo
+import ZoneInfo import requests
 
 # ---------- CONFIG ----------
 ALPACA_KEY = os.environ["ALPACA_API_KEY"]
