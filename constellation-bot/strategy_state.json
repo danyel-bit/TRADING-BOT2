@@ -1,0 +1,8 @@
+{
+  "buy_momentum_pct": 3.0,
+  "stop_loss_pct": -5.0,
+  "take_profit_pct": 15.0,
+  "position_size_usd": 500,
+  "updated": null,
+  "last_review_summary": "No review has run yet — using the original defaults."
+}
