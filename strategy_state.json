@@ -4,5 +4,36 @@
   "take_profit_pct": 15.0,
   "position_size_usd": 500,
   "updated": "2026-09-12",
-  "last_review_summary": "Only 0 closed trade(s) in the lookback window \u2014 not enough data to tune responsibly. Leaving parameters unchanged."
+  "last_review_summary": "Only 0 closed trade(s) in the lookback window \u2014 not enough data to tune responsibly. Leaving parameters unchanged.",
+  "global": {
+    "buy_momentum_pct": 3.0,
+    "stop_loss_pct": -5.0,
+    "take_profit_pct": 15.0,
+    "position_size_usd": 500,
+    "ma_period": 20,
+    "volume_multiplier": 1.2
+  },
+  "per_symbol": {
+    "AAPL": {
+      "buy_momentum_pct": 3.0,
+      "stop_loss_pct": -4.0,
+      "take_profit_pct": 10.0
+    },
+    "MSFT": {
+      "buy_momentum_pct": 4.0,
+      "stop_loss_pct": -8.0,
+      "take_profit_pct": 10.0
+    },
+    "NVDA": {
+      "buy_momentum_pct": 2.0,
+      "stop_loss_pct": -8.0,
+      "take_profit_pct": 20.0
+    },
+    "TSLA": {
+      "buy_momentum_pct": 5.0,
+      "stop_loss_pct": -8.0,
+      "take_profit_pct": 10.0
+    }
+  },
+  "last_backtest_summary": "AAPL: best found was momentum +3.0%, stop -4.0%, take-profit +10.0% \u2014 5 simulated trades over ~2 years, 80% win rate, +43.9% total simulated return. MSFT: best found was momentum +4.0%, stop -8.0%, take-profit +10.0% \u2014 5 simulated trades over ~2 years, 60% win rate, +15.9% total simulated return. NVDA: best found was momentum +2.0%, stop -8.0%, take-profit +20.0% \u2014 7 simulated trades over ~2 years, 29% win rate, -11.6% total simulated return. TSLA: best found was momentum +5.0%, stop -8.0%, take-profit +10.0% \u2014 10 simulated trades over ~2 years, 50% win rate, -0.6% total simulated return. SPY: no parameter combination produced enough trades to trust \u2014 kept existing settings."
 }
