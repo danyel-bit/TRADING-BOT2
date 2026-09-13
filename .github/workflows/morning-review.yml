@@ -26,6 +26,7 @@ jobs:
           ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
         run: python review_and_tune.py
 
       - name: Commit updated strategy + review log
