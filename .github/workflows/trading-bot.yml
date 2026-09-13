@@ -26,12 +26,13 @@ jobs:
           ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
         run: python trading_bot.py
 
       - name: Commit today's log
         run: |
           git config user.name "constellation-bot"
           git config user.email "actions@github.com"
-          git add logs/
+          git add logs/ shadow_results.json
           git commit -m "Trading log for $(date -u +'%Y-%m-%d')" || echo "Nothing to commit"
           git push
