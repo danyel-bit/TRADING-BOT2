@@ -1,1 +1,17 @@
-{}
+{
+  "aggressive": {
+    "open": {},
+    "closed": [],
+    "note": "looser entry, wider stops \u2014 does catching more setups beat the extra losers?"
+  },
+  "conservative": {
+    "open": {},
+    "closed": [],
+    "note": "stricter entry, tight stops \u2014 does being picky and quick beat the live rules?"
+  },
+  "no_context": {
+    "open": {},
+    "closed": [],
+    "note": "the old price-only strategy \u2014 proves whether the context layer actually helps"
+  }
+}
